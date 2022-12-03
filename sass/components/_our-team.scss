@@ -1,0 +1,65 @@
+.our-team{
+    background-color: $additional-white;
+
+    &__container{
+        flex-direction: column;
+    }
+
+    &__title{
+        @extend .title;
+        margin-bottom: 50px;
+    }
+
+    &__card-set {
+        @include card-set(1170, 30px);
+    }
+
+    &__card{
+        background-color: $main-white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__worker-info{
+        padding: 30px 0;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    &__worker-name{
+        color: $main-black;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 10px;
+    }
+
+    &__worker-position{
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 28px;
+    }
+
+    &__media-bar{
+        @extend .social-media-set;
+    }
+
+    &__media-link{
+        @include social-media-icon();
+
+        &:hover{
+            fill: $main-white;
+            background-color: $main-blue;
+        }
+    }
+
+    &__media-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+}

@@ -1,0 +1,14 @@
+@mixin logo ($color: #000000, ) {
+    @extend %link;
+    width: 145px;
+    color: $color;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+}
+
+@mixin logo-start ($color: $main-blue) {
+    color: $color;
+}

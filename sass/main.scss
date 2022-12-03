@@ -1,0 +1,39 @@
+@import './base/normalize';
+@import './utils/vars';
+@import './utils/is-hidden';
+@import './utils/nav-aktive';
+@import './utils/remove-styles';
+@import './base/fonts';
+@import './base/base';
+
+// Common components 
+
+@import './components/mobile-menu';
+@import './components/common/backdrop';
+@import './components/common/btn';
+@import './components/common/card-set';
+@import './components/common/card';
+@import './components/common/container';
+@import './components/common/icon';
+@import './components/common/logo';
+@import './components/common/modal-window';
+@import './components/common/section';
+@import './components/common/title';
+@import './components/common/animations';
+@import './components/common/social-media-set';
+@import './components/common/social-media-icon';
+
+// Components
+
+
+@import './components/header';
+@import './components/hero';
+@import './components/qualities';
+@import './components/our-work';
+@import './components/our-team';
+@import './components/regular-customers';
+@import './components/footer';
+@import './components/callback-form';
+@import './components/portfolio';
+@import './components/filters';
+@import './components/portfolio-set';

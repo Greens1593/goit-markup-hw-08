@@ -1,0 +1,17 @@
+.active{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: -1px;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: $main-blue;
+        
+        animation-name: nav-line;
+        animation-duration: $transition-duration;
+        animation-timing-function: $transition-timing-function;
+    }
+}

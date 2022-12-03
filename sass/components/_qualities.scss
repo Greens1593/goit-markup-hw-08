@@ -1,0 +1,36 @@
+.qualities{
+    &__card-set{
+        @include card-set(1170px, 30px)
+    }
+    &__card{
+        width: 270px;
+        font-size: 14px;
+    }
+    &__card-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 120px;
+
+        margin-bottom: 30px;
+
+        background-color: $additional-white;
+        border-radius: 4px; 
+    }
+    &__card-title{
+        color: $main-black;
+        padding-bottom: 10px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+    &__card-description{
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+
+    &__icon{
+        @include icon(70px, 70px, none)
+    }
+}

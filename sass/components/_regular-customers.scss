@@ -1,0 +1,31 @@
+.regular-customers{
+    &__container{
+        flex-direction: column;
+    }
+    &__title{
+        @extend .title;
+        margin-bottom: 50px;
+    }
+    &__clients-list{
+        @include card-set(100%, 30px)
+    }
+    &__client-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 92px;
+        width: 170px;
+        border: rgba(175, 177, 184, 1) solid 1px;
+        border-radius: 4px;
+        fill: #AFB1B8;
+        
+        transition-property: fill, border-color;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-timing-function;
+
+        &:hover, &:focus{
+            fill: #2196F3;
+            border-color: rgba(33, 150, 243, 1);
+        }
+    }
+}

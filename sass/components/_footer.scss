@@ -1,0 +1,116 @@
+.footer{
+    background-color: $additional-black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: $additional-grey;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    &__about {
+            margin-right: 70px;
+            width: 215px;
+        }
+
+    &__logo{
+        @include logo($main-white);
+        display: block;
+        margin-bottom: 20px;
+    }
+    &__logo-start{
+        @include logo-start()
+    }
+    &__adress{
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+    &__location{
+        @extend %link;
+        display: block;
+        color: $main-white;
+    }
+    &__contact{
+        @extend %link;
+
+        transition-property: color;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-timing-function;
+        &:hover, &:focus{
+            color: $main-blue;
+        }
+    }
+
+    &__socials-title{
+        color: $main-white;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        
+        margin-bottom: 20px;
+    }
+
+    &__social-media-bar{
+        @extend .social-media-set;
+    }
+
+    &__social-media-link{
+        @include social-media-icon($main-white, rgba(255, 255, 255, 0.1));
+
+        &:hover{
+            background-color: $main-blue;
+        }
+    }
+
+    &__social-media-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    &__join-us{
+        display: flex;
+        flex-direction: column;
+        margin-left: 93px;
+    }
+
+    &__join-us-label{
+        
+        margin-bottom: 20px;
+
+        color: $main-white;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 0.875;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    &__join-us__container{
+        display: flex;
+        gap: 12px;
+    }
+
+    &__join-us__input{
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+        color: $main-white;
+        background-color: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+
+    &__join-us__btn{
+        @include btn(200px, 50px);
+        gap: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    &__join-us__btn__icon{
+        @include icon(24px, 24px, $main-white)
+    }
+}

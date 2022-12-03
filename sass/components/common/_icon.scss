@@ -1,0 +1,9 @@
+@mixin icon ($width, $height, $fill) {
+    fill: $fill;
+    width: $width;
+    height: $height;
+
+    transition-property: fill;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}

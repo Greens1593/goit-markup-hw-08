@@ -1,0 +1,15 @@
+@mixin social-media-icon ($fill: #AFB1B8, $bg-color: none, $width:44px, $height:44px) {
+    @extend %link;
+    display: inline-block;
+    width: $width;
+    height: $height;
+    padding: 12px;
+    fill: $fill;
+    border-radius: 50%;
+
+    background-color: $bg-color;
+    
+    transition-property: background-color, fill;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}

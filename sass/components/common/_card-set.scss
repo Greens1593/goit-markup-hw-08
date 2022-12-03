@@ -1,0 +1,9 @@
+@mixin card-set ($width: inherit, $gap:0, $justify-content:space-between) {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: $width;
+    gap: $gap;
+    justify-content: $justify-content;
+}
