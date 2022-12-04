@@ -1,8 +1,9 @@
 .our-work{
+    padding-top: 0;
+    
     @media screen and (max-width: 1199.8px) {
         display: none;
     }
-    padding-top: 0;
     
     &__title{
         @include title;
