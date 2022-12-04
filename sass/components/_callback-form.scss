@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%;
 
     &__title{
         font-weight: 700;
@@ -12,6 +11,11 @@
         letter-spacing: 0.03em;
         color: $main-black;
         margin-bottom: 12px;
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            text-align: start;           
+        }
     }
 
     &__container{

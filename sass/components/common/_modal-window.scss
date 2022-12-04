@@ -16,13 +16,18 @@
 
     padding: 40px;
 
-    width: 528px;
+    max-width: 528px;
+    overflow: scroll;
 
     background-color: #FFFFFF;
 
     transition-property: transform, opacity;
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
+
+    @media screen and (max-width: 630px) {
+        top: 20px
+    }
 
     &__close-window{
         position: absolute;
