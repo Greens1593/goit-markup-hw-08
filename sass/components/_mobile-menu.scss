@@ -43,7 +43,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 48px 40px;
     background-color: $main-white;
@@ -55,12 +55,13 @@
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
 
-    @media screen and (mіx-width: 768px) {
+    @media screen and (min-width: 768px) {
         display: none;        
     }
 }
 
 .menu-container.is-open {
+    right: 0;
     transform: translateX(0);
 }
 
@@ -121,12 +122,15 @@
         display: flex;
 
         .mobile-social{
+            @media screen and (max-width: 479px){
+                font-size: 15px;
+            }
             display: flex;
             align-items: center;
             height: 22px;
             font-weight: 500;
             font-size: 18px;
-            line-height: calc(18/22);
+            line-height: calc(22/18);
             letter-spacing: 0.02em;
             padding-right: 10px;
             color: $main-blue;
