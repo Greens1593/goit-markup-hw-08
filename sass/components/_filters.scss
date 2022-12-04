@@ -1,6 +1,22 @@
 .filters{
-    @include card-set(575px, 8px);
-    margin-bottom: 50px;
+    @include card-set(326px, 8px);
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 40px;
+    row-gap: 15px;
+
+    @media screen and (min-width: $tablet) {
+        width: 575px;
+        justify-content: space-between;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 
     &__btn{
         padding: 6px 22px;

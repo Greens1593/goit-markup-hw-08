@@ -1,5 +1,8 @@
 @mixin btn ($width, $height, $font-weight: 700, $line-height: 1.88, $letter-spacing: 0.06em, $bg-color: $main-blue, $color: $main-white) {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
         width: $width;
         height: $height;
         

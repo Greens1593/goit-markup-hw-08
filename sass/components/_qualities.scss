@@ -1,10 +1,25 @@
 .qualities{
     &__card-set{
-        @include card-set(1170px, 30px)
+        @extend %list;
+
+        @media screen and (min-width: $tablet) {
+            @include card-set(738px, 30px, center)
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include card-set(1170px, 30px)
+        }
     }
     &__card{
-        width: 270px;
         font-size: 14px;
+
+        @media screen and (min-width: $tablet) {
+            width: 354px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 270px;
+        }
     }
     &__card-img{
         display: flex;
@@ -24,6 +39,10 @@
         line-height: 1.14;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+
+        @media screen and (max-width: 767.8px) {
+            text-align: center;            
+        }
     }
     &__card-description{
         line-height: 1.71;

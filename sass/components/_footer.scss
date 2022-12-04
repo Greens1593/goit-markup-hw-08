@@ -7,15 +7,37 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
 
+    &__container{
+        width: 480px;
+        gap: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media screen and (min-width: $tablet) {
+            width: 768px;
+            justify-content: space-between;           
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 1200px;
+            gap: 0;            
+        }
+    }
+
     &__about {
-            margin-right: 70px;
-            width: 215px;
+            text-align: center;
+
+            @media screen and (min-width: $desktop) {
+                text-align: start;
+            }
         }
 
     &__logo{
         @include logo($main-white);
-        display: block;
+        display: inline-block;
         margin-bottom: 20px;
+        text-align: center;
     }
     &__logo-start{
         @include logo-start()
@@ -50,6 +72,12 @@
         text-transform: uppercase;
         
         margin-bottom: 20px;
+
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            text-align: start;
+        }
     }
 
     &__social-media-bar{
@@ -72,7 +100,15 @@
     &__join-us{
         display: flex;
         flex-direction: column;
-        margin-left: 93px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1199.8px) {
+            width: 480px;           
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+        }
     }
 
     &__join-us-label{
@@ -86,11 +122,23 @@
         line-height: 0.875;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            text-align: start;
+        }
     }
 
     &__join-us__container{
         display: flex;
-        gap: 12px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media screen and (min-width: $desktop) {
+            gap: 12;
+        }
     }
 
     &__join-us__input{

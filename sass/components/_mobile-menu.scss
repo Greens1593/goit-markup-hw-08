@@ -55,7 +55,7 @@
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (mіx-width: 768px) {
         display: none;        
     }
 }

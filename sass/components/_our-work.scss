@@ -1,8 +1,11 @@
 .our-work{
+    @media screen and (max-width: 1199.8px) {
+        display: none;
+    }
     padding-top: 0;
     
     &__title{
-        @extend .title;
+        @include title;
         margin-bottom: 50px;
     }
 

@@ -3,6 +3,7 @@
     border-bottom: $header-border-bottom;
 
     &__container{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -38,9 +39,9 @@
             justify-content: space-between;
             align-items: center;
             
-            width: 283px;
+            width: 288px;
             
-            margin-left: 93px;
+            margin-left: 88px;
             padding-left: 0;
             
             color: $main-black;
@@ -51,27 +52,10 @@
         }
 
         @media screen and (min-width: $desktop) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            min-width: 281px;
-            
-            margin-left: 93px;
-            padding-left: 0;
-            
-            
-            color: $main-black;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.14;
-            letter-spacing: 0.02em;
+            width: 285px;
+            margin-left: 92px;
         }
         
-    }
-
-    &__nav-item:not(:last-child){
-        margin-right: 50px;
     }
 
     &__nav-link{
@@ -99,24 +83,33 @@
 
         @media screen and (min-width: $tablet) {
             display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: max-content;
             color: $main-grey;
             font-weight: 500;
             font-size: 14px;
             line-height: 1.14px;
             letter-spacing: 0.02em;
         }
+
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 333px;
+        }
     }
 
     &__contact{
         @extend %link;
         display: flex;
-        justify-content: center;
         align-items: center;
         gap: 10px;
         
         transition-property: color;
         transition-duration: $transition-duration;
         transition-timing-function: $transition-timing-function;
+
 
         &:hover, &:focus{
             color: $main-blue;
@@ -125,11 +118,6 @@
         &:hover > .header__icon,
         &:focus > .header__icon {
             fill: $main-blue;
-        }
-
-
-        &:not(:last-child){
-            margin-right: 50px;
         }
     }
 

@@ -2,28 +2,67 @@
     background-color: $additional-white;
 
     &__container{
-        flex-direction: column;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: column;
+        }
     }
 
     &__title{
-        @extend .title;
+        @include title(28px, calc(33/28));
         margin-bottom: 50px;
     }
 
     &__card-set {
-        @include card-set(1170, 30px);
+        @extend %list;
+
+        @media screen and (min-width: $tablet) {
+            @include card-set(768px, 30px, center);
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include card-set(1170px, 30px);
+        }
     }
 
     &__card{
         background-color: $main-white;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
+
+        
+        @media screen and (min-width: $tablet) {
+                width: 354px;
+        }
+        
+            @media screen and (min-width: $desktop) {
+                width: 270px;
+        }
+        
+        &:not(:last-child){
+            @media screen and (max-width: 767.8px) {
+                margin-bottom: 30px;            
+            }
+        }
+
+        &>img{
+            height: 460px;
+            object-fit: cover;
+
+            @media screen and (min-width: $desktop) {
+                height: 260px;
+            }
+        }
     }
 
     &__worker-info{
-        padding: 30px 0;
+        padding: 30px 0 24px 0;
         padding-left: 32px;
         padding-right: 32px;
+
+        @media screen and (min-width: $desktop) {
+            padding-bottom: 30px;           
+        }
     }
 
     &__worker-name{
