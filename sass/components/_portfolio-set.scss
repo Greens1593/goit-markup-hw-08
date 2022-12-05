@@ -77,6 +77,10 @@
         letter-spacing: 0.03em;
         color: #FFFFFF;
 
+        @media screen and (max-width: 340px) {
+            font-size: 14px;
+            line-height: 1.2;
+        }
     }
 
     &__title{

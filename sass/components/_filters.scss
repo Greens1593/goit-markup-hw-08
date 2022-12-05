@@ -6,6 +6,10 @@
     margin-bottom: 40px;
     row-gap: 15px;
 
+    @media screen and (max-width: 340px) {
+        width: 224px;
+    }
+
     @media screen and (min-width: $tablet) {
         width: 575px;
         justify-content: space-between;

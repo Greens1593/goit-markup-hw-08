@@ -16,8 +16,7 @@
 
     padding: 40px;
 
-    max-width: 528px;
-    overflow: scroll;
+    width: 450px;
 
     background-color: #FFFFFF;
 
@@ -25,8 +24,13 @@
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
 
-    @media screen and (max-width: 630px) {
-        top: 20px
+    @media screen and (max-width: 450px) {
+        width: min-content;      
+        overflow: scroll;  
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 528px;
     }
 
     &__close-window{
@@ -51,6 +55,9 @@
         
         cursor: pointer;
         
+        @media screen and (max-width: 450px) {
+            top: 25px;
+        }
                 
         &:hover {
             fill: $main-blue;

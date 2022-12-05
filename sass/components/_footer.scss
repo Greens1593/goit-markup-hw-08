@@ -8,18 +8,26 @@
     letter-spacing: 0.03em;
 
     &__container{
-        max-width: 480px;
+        width: 480px;
         gap: 60px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: baseline;
+
+        @media screen and (max-width: 479.8px) {
+            max-width: min-content;            
+        }
 
         @media screen and (min-width: $tablet) {
             width: 768px;
-            justify-content: space-between;           
+            justify-content: space-between;
+            column-gap: 0;
+            row-gap: 60px;           
         }
 
         @media screen and (min-width: $desktop) {
+            flex-wrap: nowrap;
             width: 1200px;
             gap: 0;            
         }
@@ -27,9 +35,15 @@
 
     &__about {
             text-align: center;
+            width: 232px;
+
+            @media screen and (max-width: 479.8px) {
+                max-width: 232px;                
+            }
 
             @media screen and (min-width: $desktop) {
                 text-align: start;
+                margin-right: 70px;
             }
         }
 
@@ -60,6 +74,12 @@
         transition-timing-function: $transition-timing-function;
         &:hover, &:focus{
             color: $main-blue;
+        }
+    }
+
+    &__socials{
+        @media screen and (min-width: $desktop) {
+            margin-right: 93px;
         }
     }
 
@@ -102,11 +122,8 @@
         flex-direction: column;
         margin: 0 auto;
 
-        @media screen and (max-width: 1199.8px) {
-            width: 480px;           
-        }
-
         @media screen and (min-width: 1200px) {
+            width: 570px;
             margin: 0;
         }
     }
@@ -135,19 +152,21 @@
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
-        @media screen and (max-width: $mobile) {
-            flex-direction: column;
-            align-items: center;
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            flex-wrap: nowrap;
         }
 
         @media screen and (min-width: $desktop) {
-            gap: 12;
+            gap: 12px;
         }
     }
 
     &__join-us__input{
-        max-width: 358px;
+        max-width: 450px;
         height: 50px;
         padding-left: 16px;
         color: $main-white;
@@ -155,6 +174,14 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
+
+        @media screen and (min-width: $mobile) {
+            width: 450px;         
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 358px;
+        }
     }
 
     &__join-us__btn{
