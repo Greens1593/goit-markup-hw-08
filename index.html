@@ -119,28 +119,43 @@
           <ul class="our-work__card-set">
             <li class="our-work__card">
               <img
-                src="./images/box1.jpg"
+                srcset="
+                  ./images/our-work/img-1_des@1x.jpg 1x,
+                  ./images/our-work/img-1_des@2x.jpg 2x
+                "
+                src="./images/our-work/img-1_des@1x.jpg"
                 alt="розробка"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="our-work__card-description">Десктопні додатки</p>
             </li>
             <li class="our-work__card">
               <img
-                src="./images/box2.jpg"
-                alt="верстка"
+                srcset="
+                  ./images/our-work/img-2_des@1x.jpg 1x,
+                  ./images/our-work/img-2_des@2x.jpg 2x
+                "
+                src="./images/our-work/img-2_des@1x.jpg"
+                alt="розробка"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="our-work__card-description">Мобільні додатки</p>
             </li>
             <li class="our-work__card">
               <img
-                src="./images/box3.jpg"
-                alt="дизайн"
+                srcset="
+                  ./images/our-work/img-3_des@1x.jpg 1x,
+                  ./images/our-work/img-3_des@2x.jpg 2x
+                "
+                src="./images/our-work/img-3_des@1x.jpg"
+                alt="розробка"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="our-work__card-description">Дизайнерські рішення</p>
             </li>
@@ -152,7 +167,40 @@
           <h2 class="our-team__title">Наша команда</h2>
           <ul class="our-team__card-set">
             <li class="our-team__card">
-              <img src="./images/img1.jpg" alt="Ігор Дем'яненко" />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our-team/img-1_des@1x.jpg 1x,
+                    ./images/our-team/img-1_des@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our-team/img-1_tab@1x.jpg 1x,
+                    ./images/our-team/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our-team/img-1_mob@1x.jpg 1x,
+                    ./images/our-team/img-1_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/our-team/img-1_mob@1x.jpg"
+                  alt="Ігор Дем'яненко"
+                  loading="lazy"
+                />
+              </picture>
               <div class="our-team__worker-info">
                 <p class="our-team__worker-name">
                   <strong>Ігор Дем'яненко</strong>
@@ -211,7 +259,40 @@
               </div>
             </li>
             <li class="our-team__card">
-              <img src="./images/img2.jpg" alt="Ольга Рєпіна" />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our-team/img-2_des@1x.jpg 1x,
+                    ./images/our-team/img-2_des@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our-team/img-2_tab@1x.jpg 1x,
+                    ./images/our-team/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our-team/img-2_mob@1x.jpg 1x,
+                    ./images/our-team/img-2_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/our-team/img-2_mob@1x.jpg"
+                  alt="Ольга Рєпіна"
+                  loading="lazy"
+                />
+              </picture>
               <div class="our-team__worker-info">
                 <p class="our-team__worker-name">
                   <strong>Ольга Рєпіна</strong>
@@ -270,7 +351,40 @@
               </div>
             </li>
             <li class="our-team__card">
-              <img src="./images/img3.jpg" alt="Микола Тарасов" />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our-team/img-3_des@1x.jpg 1x,
+                    ./images/our-team/img-3_des@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our-team/img-3_tab@1x.jpg 1x,
+                    ./images/our-team/img-3_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our-team/img-3_mob@1x.jpg 1x,
+                    ./images/our-team/img-3_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/our-team/img-3_mob@1x.jpg"
+                  alt="Микола Тарасов"
+                  loading="lazy"
+                />
+              </picture>
               <div class="our-team__worker-info">
                 <p class="our-team__worker-name">
                   <strong>Микола Тарасов</strong>
@@ -329,7 +443,40 @@
               </div>
             </li>
             <li class="our-team__card">
-              <img src="./images/img4.jpg" alt="Михайло Єрмаков" />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our-team/img-4_des@1x.jpg 1x,
+                    ./images/our-team/img-4_des@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our-team/img-4_tab@1x.jpg 1x,
+                    ./images/our-team/img-4_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our-team/img-4_mob@1x.jpg 1x,
+                    ./images/our-team/img-4_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/our-team/img-4_mob@1x.jpg"
+                  alt="Михайло Єрмаков"
+                  loading="lazy"
+                />
+              </picture>
               <div class="our-team__worker-info">
                 <p class="our-team__worker-name">
                   <strong>Михайло Єрмаков</strong>
